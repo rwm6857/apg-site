@@ -249,3 +249,17 @@
   .apg-hero__photo img { height: 360px; }
   .apg-hero__photo .apg-win { position: static; max-width: none; margin-top: var(--space-4); box-shadow: none; }
 }
+
+/* ---------- Page hero (inner pages): text on capitol, Capitol interior photo ---------- */
+.apg-pagehero { position: relative; overflow: hidden; background: var(--surface-capitol); color: var(--on-capitol); }
+.apg-pagehero--photo { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); min-height: 440px; }
+.apg-pagehero__text { display: flex; flex-direction: column; justify-content: center; gap: var(--space-4); padding: var(--space-8) var(--space-7) var(--space-8) max(var(--space-6), calc((100vw - var(--content-max)) / 2)); }
+.apg .apg-pagehero__text h1 { color: var(--on-capitol); max-width: 16ch; }
+.apg .apg-pagehero__text p { color: var(--on-capitol-muted); max-width: 44ch; font-size: 20px; line-height: 31px; }
+.apg-pagehero__photo { position: relative; margin: 0; min-height: 100%; }
+.apg-pagehero__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; display: block; }
+@media (max-width: 720px) {
+  .apg-pagehero--photo { grid-template-columns: 1fr; min-height: 0; }
+  .apg-pagehero__photo { order: -1; height: 220px; }
+  .apg-pagehero__text { padding: var(--space-7) var(--space-4); }
+}

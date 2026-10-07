@@ -51,16 +51,12 @@
 .apg-ph { display: grid; place-items: center; text-align: center; padding: var(--space-5); background: repeating-linear-gradient(135deg, var(--surface-limestone) 0 12px, var(--surface-paper) 12px 24px); border: 1px dashed var(--line-strong); color: var(--ink-muted); font: 600 14px/20px var(--font-sans); border-radius: var(--radius-lg); }
 .on-dark .apg-ph { background: var(--surface-capitol-raised); border-color: var(--line-inverse); color: var(--on-capitol-muted); }
 .apg-wrap { max-width: var(--content-max); margin: 0 auto; }
-.apg-pagehero { background: var(--surface-capitol); color: var(--on-capitol); padding: var(--space-8) var(--space-6) var(--space-8); position: relative; overflow: hidden; }
-.apg-pagehero h1 { color: var(--on-capitol); margin-top: var(--space-3); max-width: 20ch; }
-.apg-pagehero p { color: var(--on-capitol-muted); margin-top: var(--space-4); max-width: 60ch; font-size: 20px; line-height: 31px; }
 .apg-two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-7); align-items: start; }
 .apg-bodies { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5); }
 .apg-body-card { background: var(--surface-card); border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-5); display: grid; gap: var(--space-2); align-content: start; }
 .apg-body-card p { color: var(--ink-muted); font-size: 16px; line-height: 25px; }
 @media (max-width: 720px) {
   .apg-two, .apg-bodies { grid-template-columns: 1fr; }
-  .apg-pagehero { padding: var(--space-7) var(--space-4); }
 }
 
 /* Static-site extras */
