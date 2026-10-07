@@ -263,3 +263,23 @@
   .apg-pagehero__photo { order: -1; height: 220px; }
   .apg-pagehero__text { padding: var(--space-7) var(--space-4); }
 }
+
+/* ---------- Social links (LinkedIn, Facebook) ---------- */
+.apg-social { display: flex; gap: var(--space-2); }
+.apg-social a { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: var(--radius-md); border: 1px solid var(--line-strong); color: var(--ink); text-decoration: none; transition: background-color .15s, color .15s, border-color .15s; }
+.apg-social a:hover { background: var(--surface-limestone); color: var(--link); }
+.on-dark .apg-social a, .apg-footer .apg-social a { border-color: var(--line-inverse); color: var(--on-capitol); }
+.on-dark .apg-social a:hover, .apg-footer .apg-social a:hover { background: var(--surface-capitol-raised); color: var(--dome-gold); }
+.apg-social .apg-icon { width: 20px; height: 20px; }
+.apg-chip .apg-icon { width: 14px; height: 14px; }
+.apg-feed__foot a { display: inline-flex; align-items: center; gap: var(--space-2); font-weight: 600; }
+
+/* ---------- Facebook page feed (Meta Page Plugin) ---------- */
+.apg-social-split { max-width: var(--content-max); margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 500px); gap: var(--space-7); align-items: start; }
+.apg-fbfeed { width: 100%; max-width: 500px; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--surface-card); }
+.apg-fbfeed iframe { display: block; width: 100%; border: 0; }
+.apg-fbfeed__fallback { display: grid; place-items: center; gap: var(--space-3); padding: var(--space-6); text-align: center; color: var(--ink-muted); font-size: 15px; line-height: 22px; }
+@media (max-width: 720px) {
+  .apg-social-split { grid-template-columns: 1fr; }
+  .apg-fbfeed { margin: 0 auto; }
+}

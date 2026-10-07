@@ -29,6 +29,23 @@
       });
     });
   }
+  // Facebook page feed (Meta Page Plugin). Width is read from the container so it fits phones too.
+  var FB_PAGE = 'https://www.facebook.com/AutismProvidersOfGeorgia/';
+  document.querySelectorAll('[data-fb-feed]').forEach(function (box) {
+    var h = parseInt(box.getAttribute('data-fb-feed'), 10) || 640;
+    box.style.minHeight = h + 'px';
+    var w = Math.max(180, Math.min(500, Math.floor(box.clientWidth || 500)));
+    var src = 'https://www.facebook.com/plugins/page.php?href=' + encodeURIComponent(FB_PAGE) +
+      '&tabs=timeline&width=' + w + '&height=' + h +
+      '&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false';
+    var f = document.createElement('iframe');
+    f.src = src; f.width = w; f.height = h; f.title = 'Autism Providers of Georgia on Facebook';
+    f.setAttribute('scrolling', 'no'); f.setAttribute('frameborder', '0');
+    f.setAttribute('allow', 'clipboard-write; encrypted-media; picture-in-picture; web-share');
+    f.style.height = h + 'px';
+    box.appendChild(f);
+  });
+
   var filters = document.querySelectorAll('[data-filter]');
   if (filters.length) {
     var posts = document.querySelectorAll('[data-kind]');

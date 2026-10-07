@@ -61,6 +61,9 @@
 
 /* Static-site extras */
 [hidden] { display: none !important; }
+[data-fb-feed] { position: relative; }
+[data-fb-feed] .apg-fbfeed__fallback { position: absolute; inset: 0; align-content: center; }
+[data-fb-feed] iframe { position: relative; z-index: 1; background: transparent; }
 @media (max-width: 720px) {
   .apg-header { height: auto; flex-wrap: wrap; row-gap: 8px; padding-top: 12px; padding-bottom: 8px; }
   .apg-nav { order: 3; width: 100%; gap: 20px; overflow-x: auto; padding-bottom: 4px; }
